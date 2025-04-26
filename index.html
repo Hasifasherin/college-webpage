@@ -1,126 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="college">
-        <title>Arts & Science college</title>
-        <style>
-            body{
-                font-family: Arial, Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            .header{
-                background-color: dimgrey;
-                color: antiquewhite;
-                padding: 20px;
-                text-align: center;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="college">
+    <title>Arts and Science college</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <!-- header section -->
+     <div class="header">
+        <h1>Arts and Science College </h1>
+        <p>Your Future begin Here!</p>
+     </div>
+     <!-- navigation -->
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <!--content section-->
+      <div class="content">
+         <h2 id="about">About Us</h2>
+         <p>Arts and Science College is a premier institution offering quality education in arts, science, and technology. We are committed to shaping the future of the world.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consectetur, deserunt voluptas doloremque cum error maiores esse sapiente? Voluptates, quos. Animi eveniet blanditiis numquam,
+             at doloribus maxime delectus iusto adipisci!<br>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ab quas! Exercitationem excepturi sit molestias, autem repudiandae, saepe earum, eligendi itaque velit ad totam. 
+             Velit blanditiis molestiae nesciunt eum? Velit.
+         </p>
+         <h2 id="departments"> Departments</h2>
+         <p>We offer various departments including :</p>
+         <ul>
+            <li>Computer Science</li>
+            <li>Physics</li>
+            <li>English Literature</li>
+            <li>Chemistry</li>
+            <li>Commerce</li>
+         </ul>
+      </div>
+      <h2>Faculty</h2>
+      <p>Our experienced Faculty members are dedicated to imparting quality eduation in their respective fields</p>
+      <div class="faculty-list">
+      <ol>
+        <li>Dr.Rahib-Head of Computer Science</li>
+        <li>Dr.fathima-Head of Physics</li>
+        <li>prof.micheal-Head of English Literature</li>
+        <li>Dr.sara-Head of Chemistry</li>
+        <li>Dr.vinodh-Head of Commerce</li>
+      </ol>
+    </div>
+    <div class="image-section">
+        <h2>Our Campus</h2>
+        <img src="https://content.jdmagicbox.com/comp/tirunelveli/l5/0462px462.x462.190825113717.w4l5/catalogue/einstein-college-of-arts-and-science-seethaparpanallur-tirunelveli-colleges-plj7z9q5xu.jpg" alt="Campus" width="600">
+    </div>
+</div>
 
-            .content{
-                padding: 20px;
-            }
-            .image-section{
-                text-align: center;
-                margin-top: 20px;
+<!-- Contact Form Section -->
+<div id="contact" class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required>
 
-            }
-            .contact-form {
-                max-width: 500px;
-                margin: 0 auto;
-                background-color: white;
-                padding: 30px;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your Email" required>
 
-            .contact-form h2 {
-                margin-bottom: 20px;
-                color: #003366;
-            }
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
 
-            .contact-form input, 
-            .contact-form textarea {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 15px;
-                border-radius: 5px;
-                border: 1px solid #ccc;
-                font-size: 16px;
-            }
+        <button type="submit">Send Message</button>
+    </form>
+</div>
 
-            .contact-form button {
-                background-color: #003366;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-                margin-top: 20px;
-            }
+<!-- Footer Section -->
+<div class="footer">
+    <p>© 2025 Arts and Science College.</p>
+</div>
 
-
-            .contact-form button:hover {
-                background-color: #005599;
-            }
-            .footer{
-                background-color: dimgrey;
-                color: antiquewhite;
-                text-align: center;
-                padding: 10px;
-                position: relative;
-                width: 100%;
-                bottom: 0;
-            }
-            a{
-                color: #0077cc;
-                text-decoration: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-           <h1> Arts and Science College</h1>
-            <p>Your Future Begins Here!</p>
-
-        </div>
-
-        <div class="content">
-            <h2> About Us</h2>
-            <p>Arts and Science College is premier institution offering quality eduation in science , arts, and technology. We are committed to shaping the future leaders of the world.</p>
-
-            <h2>Departments</h2>
-            <p>We offer various departments including computer science, Physics, English Literature, and more. </p>
-
-            <p>To learn more, visit our <a href="https://www.example.com">official website</a></p>
-
-        <div class="image-section">
-            <h2>Our Campus</h2>
-            <img src="https://content.jdmagicbox.com/comp/tirunelveli/l5/0462px462.x462.190825113717.w4l5/catalogue/einstein-college-of-arts-and-science-seethaparpanallur-tirunelveli-colleges-plj7z9q5xu.jpg" alt="Campus" width="600">
-        </div>
-        </div>
-
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" placeholder="Your Name" required>
-          
-              <label for="email">Email:</label>
-              <input type="email" id="email" placeholder="Your Email" required>
-          
-              <label for="message">Message:</label>
-              <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
-          
-              <button type="submit">Send Message</button>
-              
-            </form>
-          </div>
-          
-
-        <div class="footer">
-            <p>© 2025 Arts and Science College.</p>
-        </div>
-    </body>
+</body>
 </html>
