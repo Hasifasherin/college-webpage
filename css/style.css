@@ -26,6 +26,7 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -38,11 +39,19 @@ body {
   color: #f0c040;
 }
 
+/* Content Wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 /* Content Section */
 .content {
-  padding: 40px 20px;
   max-width: 1000px;
-  margin: auto;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .content h2 {
@@ -92,9 +101,9 @@ li {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;           /* Padding inside input */
-  margin-bottom: 20px;      /* Margin outside input */
-  border: 2px solid #ccc;   /* Border applied */
+  padding: 12px; /* Padding inside input */
+  margin-bottom: 20px; /* Margin outside input */
+  border: 2px solid #ccc; /* Border applied */
   border-radius: 6px;
   font-size: 16px;
   transition: border-color 0.3s;
@@ -133,4 +142,40 @@ li {
 a {
   color: #0077cc;
   text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content {
+      padding: 10px;
+      width: 90%;
+  }
+
+  .contact-form {
+      padding: 20px;
+  }
+
+  .footer {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 10px;
+  }
+
+  .image-section img {
+      width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      font-size: 14px;
+  }
 }
