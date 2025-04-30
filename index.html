@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,30 @@
     <title>Arts and Science College</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <div class="header">
         <h1>Arts and Science College</h1>
         <p>Your Future Begins Here!</p>
-    </header>
+    </div>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <div class="nav">
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#departments">Departments</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
 
-    <!-- Main Content Wrapper -->
-    <main class="content-wrapper">
-        <!-- Content Section -->
-        <div class="content">
+    <!-- Main Content Section with Grid Layout -->
+    <div class="content-grid">
+        <!-- Main Content -->
+        <div class="main-content">
             <h2 id="about">About Us</h2>
-            <p>Arts and Science College is a premier institution offering quality education in arts, science, and technology. We are committed to shaping the future of the world.</p>
+            <p>Arts and Science College is a premier institution offering quality education in arts, science, and
+                technology. We are committed to shaping the future of the world. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed labore cumque neque recusandae blanditiis nostrum quidem aut, repudiandae architecto amet voluptate iusto soluta 
+                possimus laboriosam sequi dolores rem corrupti voluptas.</p>
 
             <h2 id="departments">Departments</h2>
             <p>We offer various departments including:</p>
@@ -40,7 +44,8 @@
             </ul>
 
             <h2>Faculty</h2>
-            <p>Our experienced Faculty members are dedicated to imparting quality education in their respective fields:</p>
+            <p>Our experienced Faculty members are dedicated to imparting quality education in their respective fields:
+            </p>
             <ol class="faculty-list">
                 <li>Dr. Rahib - Head of Computer Science</li>
                 <li>Dr. Fathima - Head of Physics</li>
@@ -51,31 +56,74 @@
 
             <div class="image-section">
                 <h2>Our Campus</h2>
-                <img src="https://content.jdmagicbox.com/comp/tirunelveli/l5/0462px462.x462.190825113717.w4l5/catalogue/einstein-college-of-arts-and-science-seethaparpanallur-tirunelveli-colleges-plj7z9q5xu.jpg" alt="Campus Image">
+                <img src="https://content.jdmagicbox.com/comp/tirunelveli/l5/0462px462.x462.190825113717.w4l5/catalogue/einstein-college-of-arts-and-science-seethaparpanallur-tirunelveli-colleges-plj7z9q5xu.jpg"
+                    alt="Campus Image">
             </div>
         </div>
 
-        <!-- Contact Form Section -->
-        <div id="contact" class="contact-form">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Your Name" required>
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h2>News & Events</h2>
+            <div class="event">
+                <h3>College Fest</h3>
+                <p>Join us for an exciting College Fest on 25th December. Various competitions, performances, and
+                    workshops will be held!</p>
+                <span class="event-date">25th December</span>
+            </div>
+            <div class="event">
+                <h3>Science Exhibition</h3>
+                <p>Explore the latest innovations in science and technology at our annual Science Exhibition on 10th
+                    November.</p>
+                <span class="event-date">10th November</span>
+            </div>
+            <div class="event">
+                <h3>New Course in Data Science</h3>
+                <p>We are proud to announce the launch of a new course in Data Science. Enroll now to secure your spot!
+                </p>
+                <span class="event-date">Enrollment Open</span>
+            </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Your Email" required>
+            <!-- Additional Events -->
+            <div class="event">
+                <h3>Guest Lecture on AI</h3>
+                <p>Don't miss the guest lecture on Artificial Intelligence by Dr. John Doe on 5th December.</p>
+                <span class="event-date">5th December</span>
+            </div>
+            <div class="event">
+                <h3>Sports Meet</h3>
+                <p>Our annual Sports Meet will be held on 15th January. Get ready for some exciting sports competitions!
+                </p>
+                <span class="event-date">15th January</span>
+            </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="more-info">
+                <a href="#">View All Events</a>
+            </div>
         </div>
-    </main>
+
+    </div>
+
+    <!-- Contact Form Section -->
+    <div id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <div class="footer">
         <p>© 2025 Arts and Science College.</p>
-    </footer>
+    </div>
 </body>
+
 </html>
