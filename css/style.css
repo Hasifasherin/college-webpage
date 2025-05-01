@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -137,7 +138,6 @@ li {
   color: #fff;
 }
 
-
 /* Image Section */
 .image-section {
   text-align: center;
@@ -211,4 +211,115 @@ li {
 a {
   color: #0077cc;
   text-decoration: none;
+}
+
+/* Mobile and Tablet View Media Queries */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;  /* Stacks the content and sidebar */
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .sidebar h2 {
+    font-size: 22px;
+  }
+
+  .event h3 {
+    font-size: 16px;
+  }
+
+  .event p {
+    font-size: 14px;
+  }
+
+  .event .event-date {
+    font-size: 14px;
+  }
+
+  .more-info a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .header {
+    padding: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  .content-grid {
+    padding: 20px 10px;
+  }
+
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+  }
+
+  .event {
+    padding: 10px;
+  }
+
+  .event h3 {
+    font-size: 14px;
+  }
+
+  .event p {
+    font-size: 12px;
+  }
+
+  .event .event-date {
+    font-size: 14px;
+  }
+
+  .more-info a {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 12px;
+  }
+
+  .contact-form button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
