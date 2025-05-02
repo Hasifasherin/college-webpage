@@ -19,24 +19,32 @@ body {
   text-align: center;
 }
 
-/* Navigation Bar */
+/* Sticky Navigation Bar */
 .nav {
-  background-color: #444;
+  position: sticky;
+  top: 0;
+  background-color: #004080;
+  padding: 12px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px;
+  gap: 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
 }
 
 .nav a:hover {
-  color: #f0c040;
+  background-color: #0066cc;
+  border-radius: 5px;
 }
+
 
 /* Grid Layout for Main Content and Sidebar */
 .content-grid {
