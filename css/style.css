@@ -19,7 +19,16 @@ body {
   text-align: center;
 }
 
-/* Sticky Navigation Bar */
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+/* Navigation */
 .nav {
   position: sticky;
   top: 0;
@@ -45,14 +54,13 @@ body {
   border-radius: 5px;
 }
 
-
 /* Grid Layout for Main Content and Sidebar */
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 300px; /* 1st column takes remaining space, 2nd column (sidebar) has a fixed width */
   gap: 20px;
   padding: 40px 20px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
