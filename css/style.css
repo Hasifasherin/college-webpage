@@ -216,6 +216,12 @@ li {
 .contact-form button:hover {
   background-color: #005599;
 }
+input:focus{
+  background-color: rgb(171, 171, 234);
+}
+textarea:focus{
+  background-color: rgb(171, 171, 234);
+}
 
 /* Footer Section */
 .footer {
