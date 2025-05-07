@@ -229,7 +229,7 @@ textarea:focus{
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: 40px;
+ margin-top: auto;
 }
 
 /* Anchor Tags */
