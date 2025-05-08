@@ -6,6 +6,7 @@
         <meta name="description" content="college">
         <title>Arts and Science College</title>
         <link rel="stylesheet" href="css/style.css">
+        
     </head>
 <body>
     <!-- Header Section -->
@@ -25,7 +26,7 @@
     <!-- Contact Form Section -->
     <div id="contact" class="contact-form">
         <h2>Contact Us</h2>
-        <form>
+        <form onsubmit="submitMessage()">
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Your Name" required>
 
@@ -34,7 +35,7 @@
 
             <label for="message">Message:</label>
             <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
-            <button type="submit" onclick="myFunction()">Send Message</button>
+            <button type="submit" >Send Message</button>
         </form>
     </div>
     <!-- Footer Section -->
@@ -42,12 +43,6 @@
         <p>© 2025 Arts and Science College.</p>
     </footer>
 
-   
-
-<script>
-function myFunction() {
-  alert("The message was sent.");
-}
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>
