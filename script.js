@@ -36,3 +36,17 @@ function toggleForm() {
 
   updateClock(); // initial call
   setInterval(updateClock, 1000); // update every second
+
+
+  function display(){
+    var text=document.getElementById('course').value
+    if(text=='Arts Stream'){
+      alert("You selected Arts Stream");
+    }
+    else if(text=='science stream'){
+      alert("You selected science Stream");
+    }
+    else{
+      alert("You selected commerce")
+    }
+  }

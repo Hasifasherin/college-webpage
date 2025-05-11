@@ -349,3 +349,28 @@ a {
     padding: 8px 16px;
   }
 }
+
+.btn {
+  background-color: #003366;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #005599;
+}
+
+.choice input {
+  width: 200px;
+  height: 40px;
+  padding: 12px;           /* Padding inside input */
+  margin-bottom: 20px;      /* Margin outside input */
+  border: 2px solid #ccc;   /* Border applied */
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
