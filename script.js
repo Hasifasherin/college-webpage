@@ -50,3 +50,10 @@ function toggleForm() {
       alert("You selected commerce")
     }
   }
+
+function changeColor() {
+  // Using getElementById
+  const collegeTitle = document.getElementById("collegeName");
+
+  collegeTitle.style.color = "blue"; 
+}
