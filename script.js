@@ -57,3 +57,17 @@ function changeColor() {
 
   collegeTitle.style.color = "blue"; 
 }
+
+const button=document.getElementById('aboutus');
+const aboutSection=document.getElementById("aboutSection")
+
+button.addEventListener('click', function () {
+  if(aboutSection.style.display==='none'){
+      aboutSection.style.display='Block';
+      button.textContent='Hide content'
+  }
+  else{
+    aboutSection.style.display='none'
+    button.textContent='About Us'
+  }
+});
