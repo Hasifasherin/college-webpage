@@ -51,35 +51,14 @@ function toggleForm() {
     }
   }
 
-function changeColor() {
-  // Using getElementById
-  const collegeTitle = document.getElementById("collegeName");
 
-  collegeTitle.style.color = "blue"; 
-}
 
-const button=document.getElementById('aboutus');
-const aboutSection=document.getElementById("aboutSection")
-
-button.addEventListener('click', function () {
-  if(aboutSection.style.display==='none'){
-      aboutSection.style.display='Block';
-      button.textContent='Hide content'
-  }
-  else{
-    aboutSection.style.display='none'
-    button.textContent='About Us'
-  }
+ window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-question').forEach((question) => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const isVisible = answer.style.display === "block";
+      answer.style.display = isVisible ? "none" : "block";
+    });
+  });
 });
-
- const section = document.getElementById("infoSection");
-
-    section.addEventListener("mouseover", () => {
-      section.style.backgroundColor = "#f0f8ff"; // Light blue
-      section.textContent = "You're hovering over this section!";
-    });
-
-    section.addEventListener("mouseout", () => {
-      section.style.backgroundColor = ""; // Revert background
-      section.textContent = "Hover over this section to change background and text.";
-    });

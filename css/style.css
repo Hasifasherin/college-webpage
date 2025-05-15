@@ -388,3 +388,31 @@ a {
       text-align: center;
       transition: all 0.3s ease;
 }
+
+.faq-section {
+  max-width: 600px;
+  margin: auto;
+}
+
+.faq-question {
+  background-color: #f1f1f1;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #dbeeff;
+}
+
+.faq-answer {
+  padding: 10px 15px;
+  background-color: #fff;
+  display: none;
+  border-left: 4px solid #0077cc;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
