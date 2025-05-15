@@ -71,3 +71,15 @@ button.addEventListener('click', function () {
     button.textContent='About Us'
   }
 });
+
+ const section = document.getElementById("infoSection");
+
+    section.addEventListener("mouseover", () => {
+      section.style.backgroundColor = "#f0f8ff"; // Light blue
+      section.textContent = "You're hovering over this section!";
+    });
+
+    section.addEventListener("mouseout", () => {
+      section.style.backgroundColor = ""; // Revert background
+      section.textContent = "Hover over this section to change background and text.";
+    });

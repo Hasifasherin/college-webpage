@@ -380,3 +380,11 @@ a {
   border-radius: 6px;
   font-size: 31px;
 }
+#infoSection {
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+      margin: 50px auto;
+      text-align: center;
+      transition: all 0.3s ease;
+}
