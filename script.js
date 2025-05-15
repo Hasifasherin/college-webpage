@@ -62,3 +62,18 @@ function toggleForm() {
     });
   });
 });
+
+
+document.getElementById("applyBtn").addEventListener("click", function() {
+  document.getElementById("admissionModal").style.display = "block";
+});
+
+document.querySelector(".closeBtn").addEventListener("click", function() {
+  document.getElementById("admissionModal").style.display = "none";
+});
+
+window.addEventListener("click", function(e) {
+  if (e.target == document.getElementById("admissionModal")) {
+    document.getElementById("admissionModal").style.display = "none";
+  }
+});
