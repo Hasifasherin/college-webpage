@@ -98,3 +98,38 @@ courses.forEach(function(course) {
   li.textContent = course;
   courseList.appendChild(li);
 });
+// Toggle form visibility
+function toggleForm() {
+  const form = document.getElementById("contactForm");
+  form.style.display = form.style.display === "none" ? "block" : "none";
+}
+
+// Save form data to localStorage before submission
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactFormElement");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+
+  // Pre-fill from localStorage if available
+  if (localStorage.getItem("contactData")) {
+    const data = JSON.parse(localStorage.getItem("contactData"));
+    nameInput.value = data.name || "";
+    emailInput.value = data.email || "";
+    messageInput.value = data.message || "";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const contactData = {
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value,
+    };
+
+    localStorage.setItem("contactData", JSON.stringify(contactData));
+    alert("Form data saved to localStorage!");
+    form.reset();
+  });
+});

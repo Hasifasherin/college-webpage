@@ -25,22 +25,21 @@
     </div>
     <!-- Contact Form Section -->
     <div id="contact" class="contact-form">
-        <h2>Contact Us</h2>
-        <button onclick="toggleForm()">Show Form</button>
-        <div id="contactForm">
-            <h3>Contact Us</h3>
-            <form>
-              <label>Name:</label>
-              <input type="text" name="name"><br><br>
-              <label>Email:</label>
-              <input type="email" name="email"><br><br>
-              <label>Message:</label><br>
-              <textarea name="message"></textarea><br><br>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        
+    <h2>Contact Us</h2>
+    <button onclick="toggleForm()">Show Form</button>
+    <div id="contactForm" style="display: none;">
+      <h3>Contact Us</h3>
+      <form id="contactFormElement">
+        <label>Name:</label>
+        <input type="text" name="name" id="name" /><br /><br />
+        <label>Email:</label>
+        <input type="email" name="email" id="email" /><br /><br />
+        <label>Message:</label><br />
+        <textarea name="message" id="message"></textarea><br /><br />
+        <button type="submit">Submit</button>
+      </form>
     </div>
+  </div>
 
  <section class="faq-section">
     <h2>College FAQs</h2>
