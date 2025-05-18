@@ -444,3 +444,12 @@ a {
   font-size: 24px;
   cursor: pointer;
 }
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  margin: 8px 0;
+  color: #333;
+}

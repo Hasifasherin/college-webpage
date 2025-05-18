@@ -77,3 +77,24 @@ window.addEventListener("click", function(e) {
     document.getElementById("admissionModal").style.display = "none";
   }
 });
+// Array of courses
+const courses = [
+  "Computer Science",
+  "Electronics and Communication",
+  "Mechanical Engineering",
+  "Civil Engineering",
+  "Business Administration",
+  "Physics Honours",
+  "English Literature",
+  "Data Science"
+];
+
+// Target the courseList element
+const courseList = document.getElementById("courseList");
+
+// Loop through the array and create list items
+courses.forEach(function(course) {
+  const li = document.createElement("li");
+  li.textContent = course;
+  courseList.appendChild(li);
+});
