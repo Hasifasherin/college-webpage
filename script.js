@@ -1,59 +1,30 @@
-function submitMessage(){
-    const message="Thank you for contacting us!";
-
-    let username=document.getElementById("name").value;
-
-    var usermail=document.getElementById("email").value;
-
-    alert(`${message} we will reach out to ${username} at ${usermail}.` );
-
-    return false;
-
+// Live Clock Function
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById("liveTime").textContent = timeString;
 }
 
-function toggleForm() {
-    const form = document.getElementById("contactForm");
-    const button = document.querySelector("button");
-  
-    if (form.style.display === "none" || form.style.display === "") {
-      form.style.display = "block";
-      button.textContent = "Hide Form";
-    } else {
-      form.style.display = "none";
-      button.textContent = "Show Form";
-    }
+updateClock(); // initial call
+setInterval(updateClock, 1000); // update every second
+
+// Course selection display
+function display() {
+  var text = document.getElementById('course').value;
+  if (text === 'Arts Stream') {
+    alert("You selected Arts Stream");
+  } else if (text === 'science stream') {
+    alert("You selected science Stream");
+  } else {
+    alert("You selected commerce");
   }
+}
 
-  
-  function updateClock() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById("liveTime").textContent = timeString;
-  }
-
-  updateClock(); // initial call
-  setInterval(updateClock, 1000); // update every second
-
-
-  function display(){
-    var text=document.getElementById('course').value
-    if(text=='Arts Stream'){
-      alert("You selected Arts Stream");
-    }
-    else if(text=='science stream'){
-      alert("You selected science Stream");
-    }
-    else{
-      alert("You selected commerce")
-    }
-  }
-
-
-
- window.addEventListener('DOMContentLoaded', () => {
+// FAQ Toggle
+window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.faq-question').forEach((question) => {
     question.addEventListener('click', () => {
       const answer = question.nextElementSibling;
@@ -63,21 +34,67 @@ function toggleForm() {
   });
 });
 
-
-document.getElementById("applyBtn").addEventListener("click", function() {
+// Admission Modal
+document.getElementById("applyBtn").addEventListener("click", function () {
   document.getElementById("admissionModal").style.display = "block";
 });
 
-document.querySelector(".closeBtn").addEventListener("click", function() {
+document.querySelector(".closeBtn").addEventListener("click", function () {
   document.getElementById("admissionModal").style.display = "none";
 });
 
-window.addEventListener("click", function(e) {
+window.addEventListener("click", function (e) {
   if (e.target == document.getElementById("admissionModal")) {
     document.getElementById("admissionModal").style.display = "none";
   }
 });
-// Array of courses
+
+// Toggle contact form visibility
+function toggleForm() {
+  const form = document.getElementById("contactForm");
+  const button = document.querySelector("button");
+
+  if (form.style.display === "none" || form.style.display === "") {
+    form.style.display = "block";
+    button.textContent = "Hide Form";
+  } else {
+    form.style.display = "none";
+    button.textContent = "Show Form";
+  }
+}
+
+// Form handling with validation and localStorage
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactFormElement");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    try {
+      if (emailInput.value.trim() === "") {
+        throw new Error("Email is required!");
+      }
+
+      const contactData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+      };
+
+      localStorage.setItem("contactData", JSON.stringify(contactData));
+      alert(`Thank you for contacting us, ${contactData.name}! We will reach out to you at ${contactData.email}.`);
+      form.reset();
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+});
+
+
+// Populate course list
 const courses = [
   "Computer Science",
   "Electronics and Communication",
@@ -89,47 +106,9 @@ const courses = [
   "Data Science"
 ];
 
-// Target the courseList element
 const courseList = document.getElementById("courseList");
-
-// Loop through the array and create list items
-courses.forEach(function(course) {
+courses.forEach(function (course) {
   const li = document.createElement("li");
   li.textContent = course;
   courseList.appendChild(li);
-});
-// Toggle form visibility
-function toggleForm() {
-  const form = document.getElementById("contactForm");
-  form.style.display = form.style.display === "none" ? "block" : "none";
-}
-
-// Save form data to localStorage before submission
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactFormElement");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
-
-  // Pre-fill from localStorage if available
-  if (localStorage.getItem("contactData")) {
-    const data = JSON.parse(localStorage.getItem("contactData"));
-    nameInput.value = data.name || "";
-    emailInput.value = data.email || "";
-    messageInput.value = data.message || "";
-  }
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const contactData = {
-      name: nameInput.value,
-      email: emailInput.value,
-      message: messageInput.value,
-    };
-
-    localStorage.setItem("contactData", JSON.stringify(contactData));
-    alert("Form data saved to localStorage!");
-    form.reset();
-  });
 });
