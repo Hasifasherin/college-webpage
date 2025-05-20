@@ -23,34 +23,23 @@
         <a href="contact.html">Contact</a>
     </div>
     <h2 id="departments">Departments</h2>
-            <p>We offer various departments including:</p>
-            <ol>
-                <li>Arts Stream (B.A. - Bachelor of Arts)</li>
-                    <ul>
-                        <li>B.A. English Literature</li>
-                        <li>B.A. History</li>
-                        <li>B.A. Political Science</li>
-                        <li>B.A. Sociology</li>
-                        <li>B.A. Economics</li>
-                    </ul>
-                <li>Science Stream (B.Sc. - Bachelor of Science)</li>
-                    <ul>
-                        <li>B.Sc. Physics</li>
-                        <li>B.Sc. Chemistry</li>
-                        <li>B.Sc. Mathematics</li>
-                        <li>B.Sc. Computer Science</li>
-                        <li>B.Sc. Zoology</li>
-                        <li>B.Sc. Botany</li>
-                        <li>B.Sc. Microbiology</li>
-                        <li>B.A. Psychology</li>
-                    </ul>
-                <li>Commerce & Business Stream</li>
-                    <ul>
-                        <li>B.Com. (General)</li>
-                        <li>BBA (Bachelor of Business Administration)</li>
-                        <li>BCA (Bachelor of Computer Applications)</li>
-                    </ul>
-            </ol>
+
+<label for="deptFilter">Filter by Department:</label>
+<select id="deptFilter" onchange="filterDepartments()">
+  <option value="all">All</option>
+  <option value="Computer Science">Computer Science</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Mechanical">Mechanical</option>
+  <option value="Civil">Civil</option>
+</select>
+
+<div id="departmentList">
+  <div class="department" data-dept="Computer Science">Computer Science - B.Sc, M.Sc, PhD</div>
+  <div class="department" data-dept="Electronics">Electronics - B.E, M.E</div>
+  <div class="department" data-dept="Mechanical">Mechanical - B.Tech, M.Tech</div>
+  <div class="department" data-dept="Civil">Civil - Diploma, B.Tech</div>
+</div>
+
             
             <div id="choice">
            <h1>select your choice</h1><br>

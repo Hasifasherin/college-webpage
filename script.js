@@ -133,3 +133,16 @@ courses.forEach(function (course) {
 
     // Auto slide every 6 seconds
     setInterval(nextSlide, 6000);
+
+    function filterDepartments() {
+    const filter = document.getElementById("deptFilter").value;
+    const departments = document.querySelectorAll(".department");
+
+    departments.forEach(dept => {
+      if (filter === "all" || dept.dataset.dept === filter) {
+        dept.style.display = "block";
+      } else {
+        dept.style.display = "none";
+      }
+    });
+  }
