@@ -146,3 +146,25 @@ courses.forEach(function (course) {
       }
     });
   }
+
+  const container = document.getElementById("testimonial-container");
+
+fetch("testimonials.json")
+  .then((response) => response.json())
+  .then((data) => {
+    container.innerHTML = ""; // Clear loading text
+    data.forEach((comment) => {
+      const div = document.createElement("div");
+      div.classList.add("testimonial");
+      div.innerHTML = `
+        <h3>${comment.name}</h3>
+        <p>${comment.body}</p>
+        <small>- ${comment.email}</small>
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch((error) => {
+    container.innerHTML = "<p>Failed to load testimonials. Please try again later.</p>";
+    console.error("Error fetching data:", error);
+  });

@@ -1,0 +1,37 @@
+[
+  {
+    "postId": 1,
+    "id": 1,
+    "name": "Student A",
+    "email": "studentA@example.com",
+    "body": "This college provided me great opportunities and support."
+  },
+  {
+    "postId": 1,
+    "id": 2,
+    "name": "Student B",
+    "email": "studentB@example.com",
+    "body": "Amazing faculty and modern infrastructure!"
+  },
+  {
+    "postId": 1,
+    "id": 3,
+    "name": "Student C",
+    "email": "studentC@example.com",
+    "body": "I had the best time here. Highly recommended."
+  },
+  {
+    "postId": 1,
+    "id": 4,
+    "name": "Student D",
+    "email": "studentD@example.com",
+    "body": "Great placement support and interactive sessions."
+  },
+  {
+    "postId": 1,
+    "id": 5,
+    "name": "Student E",
+    "email": "studentE@example.com",
+    "body": "Loved the campus and the environment."
+  }
+]
