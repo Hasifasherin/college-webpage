@@ -168,3 +168,30 @@ fetch("testimonials.json")
     container.innerHTML = "<p>Failed to load testimonials. Please try again later.</p>";
     console.error("Error fetching data:", error);
   });
+
+
+
+
+  const spinner = document.getElementById("spinner");
+  const announcementDiv = document.getElementById("announcement");
+
+  async function loadAnnouncement() {
+    spinner.style.display = "block";
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts/2"); // Replace with your college API or JSON file
+      if (!response.ok) throw new Error("Failed to fetch announcement.");
+
+      const data = await response.json();
+      announcementDiv.innerHTML = `
+        <h3>${data.title}</h3>
+        <p>${data.body}</p>
+      `;
+    } catch (err) {
+      announcementDiv.innerHTML = `<p style="color: red;">⚠️ ${err.message}</p>`;
+    } finally {
+      spinner.style.display = "none";
+    }
+  }
+
+  loadAnnouncement();
+
