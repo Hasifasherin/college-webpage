@@ -531,3 +531,17 @@ li {
   font-size: 16px;
   font-family: 'Segoe UI', sans-serif;
 }
+
+#success-story {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+#story-box {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
+}
