@@ -8,8 +8,8 @@ function updateClock() {
   document.getElementById("liveTime").textContent = timeString;
 }
 
-updateClock(); // initial call
-setInterval(updateClock, 1000); // update every second
+updateClock(); // Initial call
+setInterval(updateClock, 1000); // Update every second
 
 // Course selection display
 function display() {
@@ -39,22 +39,10 @@ function toggleForm() {
 
 // Student success stories
 const stories = [
-  {
-    name: "Ayesha R.",
-    achievement: "Landed an internship at Google after completing her web development course.",
-  },
-  {
-    name: "Ravi S.",
-    achievement: "Won the State-Level Robotics Challenge representing our college.",
-  },
-  {
-    name: "Meena T.",
-    achievement: "Published a research paper on AI in the IEEE Journal.",
-  },
-  {
-    name: "Farhan K.",
-    achievement: "Started his own ed-tech startup after final year project success.",
-  }
+  { name: "Ayesha R.", achievement: "Landed an internship at Google after completing her web development course." },
+  { name: "Ravi S.", achievement: "Won the State-Level Robotics Challenge representing our college." },
+  { name: "Meena T.", achievement: "Published a research paper on AI in the IEEE Journal." },
+  { name: "Farhan K.", achievement: "Started his own ed-tech startup after final year project success." }
 ];
 
 function showRandomStory() {
@@ -78,7 +66,7 @@ const courses = [
 ];
 
 const courseList = document.getElementById("courseList");
-courses.forEach(function (course) {
+courses.forEach(course => {
   const li = document.createElement("li");
   li.textContent = course;
   courseList.appendChild(li);
@@ -144,13 +132,18 @@ async function loadAnnouncement() {
 
 loadAnnouncement();
 
-// Load testimonials
-const container = document.getElementById("testimonial-container");
+// Load testimonials (fixed and optimized)
+const loader = document.getElementById('testimonial-loader');
+const testimonialContainer = document.getElementById("testimonial-container");
 
-fetch("testimonials.json")
-  .then((response) => response.json())
-  .then((data) => {
-    container.innerHTML = ""; // Clear loading text
+async function loadTestimonials() {
+  loader.style.display = 'block';
+  try {
+    const response = await fetch("testimonials.json");
+    if (!response.ok) throw new Error("Failed to fetch testimonials.");
+
+    const data = await response.json();
+    testimonialContainer.innerHTML = ""; // Clear existing
     data.forEach((comment) => {
       const div = document.createElement("div");
       div.classList.add("testimonial");
@@ -159,15 +152,19 @@ fetch("testimonials.json")
         <p>${comment.body}</p>
         <small>- ${comment.email}</small>
       `;
-      container.appendChild(div);
+      testimonialContainer.appendChild(div);
     });
-  })
-  .catch((error) => {
-    container.innerHTML = "<p>Failed to load testimonials. Please try again later.</p>";
-    console.error("Error fetching data:", error);
-  });
+  } catch (error) {
+    testimonialContainer.innerHTML = "<p>Failed to load testimonials. Please try again later.</p>";
+    console.error("Error fetching testimonials:", error);
+  } finally {
+    loader.style.display = 'none';
+  }
+}
 
-// Run all on DOM ready
+loadTestimonials();
+
+// DOM Ready
 document.addEventListener("DOMContentLoaded", function () {
   // FAQ toggle
   document.querySelectorAll('.faq-question').forEach((question) => {

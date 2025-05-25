@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="college">
-        <title>Arts and Science College</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="college" />
+  <title>Arts and Science College</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+
+</head>
 <body>
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Arts and Science College</h1>
-        <p>Your Future Begins Here!</p>
-    </div>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Arts and Science College</h1>
+    <p>Your Future Begins Here!</p>
+  </div>
 
-    <!-- Navigation -->
-    <div class="nav">
-        <a href="index.html">About</a>
-        <a href="department.html">Departments</a>
-        <a href="faculty.html">Faculty</a>
-        <a href="index.html">Campus</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <h2 id="departments">Departments</h2>
+  <!-- Navigation -->
+  <div class="nav">
+    <a href="index.html">About</a>
+    <a href="department.html">Departments</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="index.html">Campus</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-<label for="deptFilter">Filter by Department:</label>
-<select id="deptFilter" onchange="filterDepartments()">
-  <option value="all">All</option>
-  <option value="Computer Science">Computer Science</option>
-  <option value="Electronics">Electronics</option>
-  <option value="Mechanical">Mechanical</option>
-  <option value="Civil">Civil</option>
-</select>
+  <h2 id="departments">Departments</h2>
 
-<div id="departmentList">
-  <div class="department" data-dept="Computer Science">Computer Science - B.Sc, M.Sc, PhD</div>
-  <div class="department" data-dept="Electronics">Electronics - B.E, M.E</div>
-  <div class="department" data-dept="Mechanical">Mechanical - B.Tech, M.Tech</div>
-  <div class="department" data-dept="Civil">Civil - Diploma, B.Tech</div>
-</div>
+  <label for="deptFilter">Filter by Department:</label>
+  <select id="deptFilter" onchange="filterDepartments()">
+    <option value="all">All</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Mechanical">Mechanical</option>
+    <option value="Civil">Civil</option>
+  </select>
 
-            
-            <div id="choice">
-           <h1>select your choice</h1><br>
-            <form>
-              <label>Course:</label>
-              <input type="text" name="course" id="course" class="course"><br><br>
-              <button onclick="display()" class="btn">Submit</button>
-            </form>
-        </div><br><br><br>
-        <section id="testimonials">
-      <h2>Student Testimonials</h2>
-      <div id="testimonial-container">
-        <p>Loading testimonials...</p>
-      </div>
-    </section>
+  <div id="departmentList">
+    <div class="department" data-dept="Computer Science">Computer Science - B.Sc, M.Sc, PhD</div>
+    <div class="department" data-dept="Electronics">Electronics - B.E, M.E</div>
+    <div class="department" data-dept="Mechanical">Mechanical - B.Tech, M.Tech</div>
+    <div class="department" data-dept="Civil">Civil - Diploma, B.Tech</div>
+  </div>
 
-       
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>© 2025 Arts and Science College.</p>
-        <p>Current Time: <span id="liveTime"></span></p>
-    </footer>
-    <script src="script.js"></script>
+  <div id="choice">
+    <h1>Select Your Choice</h1><br>
+    <form>
+      <label>Course:</label>
+      <input type="text" name="course" id="course" class="course" /><br><br>
+      <button onclick="display()" class="btn">Submit</button>
+    </form>
+  </div>
+  <br><br><br>
+
+  <section id="testimonials">
+    <h2>Student Testimonials</h2>
+    <!-- Loader animation while fetching -->
+    <div id="testimonial-loader" class="loader"></div>
+    <div id="testimonial-container"></div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2025 Arts and Science College.</p>
+    <p>Current Time: <span id="liveTime"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
