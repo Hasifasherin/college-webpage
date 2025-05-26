@@ -545,23 +545,26 @@ li {
   font-family: Arial, sans-serif;
   margin-top: 10px;
 }
-    /* Add loader styles here */
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: auto;
-    }
+   #testimonial-container {
+  margin-top: 20px;
+}
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+.testimonial {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007BFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    #testimonial-container {
-      min-height: 80px;
-      padding: 20px;
-    }
+.testimonial h3 {
+  margin: 0 0 5px;
+}
+
+.fallback {
+  background: #ffe5e5;
+  border-left: 4px solid red;
+  padding: 15px;
+  color: #a00;
+  margin-top: 20px;
+}
