@@ -190,3 +190,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+const courseSearchInput = document.getElementById("courseSearch");
+
+courseSearchInput.addEventListener("input", () => {
+  const query = courseSearchInput.value.toLowerCase();
+  const courseCards = document.querySelectorAll(".course-card");
+
+  courseCards.forEach(card => {
+    const courseName = card.dataset.name.toLowerCase();
+    card.style.display = courseName.includes(query) ? "block" : "none";
+  });
+});
