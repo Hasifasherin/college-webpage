@@ -43,23 +43,28 @@
     <div class="department" data-dept="Civil">Civil - Diploma, B.Tech</div>
   </div>
 
-  <div id="choice">
-    <h1>Select Your Choice</h1><br>
-    <form>
-      <label>Course:</label>
-      <input type="text" name="course" id="course" class="course" /><br><br>
-      <button onclick="display()" class="btn">Submit</button>
-    </form>
-  </div>
-  <br><br><br>
+ <br><br>
 
-  <input type="text" id="courseSearch" placeholder="Search courses..." />
+  
+<h3>Fee Estimator</h3>
+<label for="feeCourse">Select Course:</label>
+<select id="feeCourse">
+  <option value="">-- Select --</option>
+  <option value="Computer Science">Computer Science</option>
+  <option value="Mechanical Engineering">Mechanical Engineering</option>
+  <option value="Data Science">Data Science</option>
+</select>
 
-<div class="course-card" data-name="Computer Science">Computer Science</div>
-<div class="course-card" data-name="Data Science">Data Science</div>
-<div class="course-card" data-name="Mechanical Engineering">Mechanical Engineering</div>
-<!-- More course cards -->
+<br><br>
 
+<label for="duration">Duration (in years):</label>
+<input type="number" id="duration" min="1" max="5" />
+
+<br><br>
+
+<button onclick="calculateFee()">Estimate Fee</button>
+
+<p id="feeResult"></p>
 
 
   <!-- Footer Section -->

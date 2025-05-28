@@ -572,3 +572,8 @@ li {
 .course-card {
   transition: all 0.3s ease;
 }
+#feeResult {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}

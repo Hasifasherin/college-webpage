@@ -202,3 +202,23 @@ courseSearchInput.addEventListener("input", () => {
     card.style.display = courseName.includes(query) ? "block" : "none";
   });
 });
+function calculateFee() {
+  const course = document.getElementById("feeCourse").value;
+  const years = parseInt(document.getElementById("duration").value, 10);
+  const result = document.getElementById("feeResult");
+
+  if (!course || isNaN(years)) {
+    result.textContent = "Please select a course and enter valid duration.";
+    return;
+  }
+
+  // Example per-year fees (can be customized)
+  const feePerYear = {
+    "Computer Science": 50000,
+    "Mechanical Engineering": 45000,
+    "Data Science": 60000,
+  };
+
+  const totalFee = feePerYear[course] * years;
+  result.textContent = `Estimated Total Fee for ${years} year(s) in ${course}: ₹${totalFee.toLocaleString()}`;
+}
