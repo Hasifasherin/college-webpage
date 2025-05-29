@@ -222,3 +222,23 @@ function calculateFee() {
   const totalFee = feePerYear[course] * years;
   result.textContent = `Estimated Total Fee for ${years} year(s) in ${course}: ₹${totalFee.toLocaleString()}`;
 }
+  // Quiz submission
+  document.getElementById("quizForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const selected = document.querySelector('input[name="motto"]:checked');
+    const result = document.getElementById("quizResult");
+    if (!selected) {
+      result.textContent = "❗ Please select an answer!";
+      result.style.color = "red";
+      return;
+    }
+
+    const correctAnswer = "d"; // "Empowering Future Minds"
+    if (selected.value === correctAnswer) {
+      result.textContent = "✅ Correct! 'Empowering Future Minds' is our motto.";
+      result.style.color = "green";
+    } else {
+      result.textContent = "❌ Oops! That's not correct. The right answer is 'Empowering Future Minds'.";
+      result.style.color = "darkred";
+    }
+  });

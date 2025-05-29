@@ -577,3 +577,18 @@ li {
   font-weight: bold;
   color: green;
 }
+
+  .quiz-section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+  }
+
+  #quizResult {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
