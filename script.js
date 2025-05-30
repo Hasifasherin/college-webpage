@@ -242,3 +242,7 @@ function calculateFee() {
       result.style.color = "darkred";
     }
   });
+function closeBanner() {
+  const banner = document.getElementById("courseBanner");
+  banner.style.display = "none";
+}

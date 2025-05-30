@@ -592,3 +592,35 @@ li {
     font-weight: bold;
   }
 
+  .course-banner {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .course-banner a {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 8px;
+    text-decoration: underline;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    color: #ccc;
+  }
+
