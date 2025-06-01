@@ -264,3 +264,17 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
+window.onload = function () {
+    const hero = document.getElementById("heroSection");
+    const form = document.getElementById("admissionForm");
+
+    if (hero) {
+      hero.classList.remove("hidden");
+      hero.classList.add("fade-in");
+    }
+
+    if (form) {
+      form.classList.remove("hidden");
+      form.classList.add("fade-in");
+    }
+  };
