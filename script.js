@@ -257,24 +257,15 @@ window.onscroll = function () {
   }
 };
 
-// Smooth scroll to top
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-window.onload = function () {
-    const hero = document.getElementById("heroSection");
-    const form = document.getElementById("admissionForm");
 
-    if (hero) {
-      hero.classList.remove("hidden");
-      hero.classList.add("fade-in");
-    }
 
-    if (form) {
-      form.classList.remove("hidden");
-      form.classList.add("fade-in");
-    }
-  };
+const navbar = document.getElementById("navbar");
+const stickyOffset = navbar.offsetTop;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= stickyOffset) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+});
