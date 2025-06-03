@@ -683,3 +683,74 @@ header.sticky {
   background: #f4f4f4;
   border: 1px solid #ccc;
 }
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.testimonials h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #eee;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  color: #555;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .testimonial p {
+    font-size: 1em;
+  }
+}

@@ -269,3 +269,27 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("sticky");
   }
 });
+
+const track = document.getElementById('carouselTrack');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+const total = document.querySelectorAll('.testimonial').length;
+
+function updateCarousel() {
+  const width = document.querySelector('.testimonial').clientWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+next.addEventListener('click', () => {
+  index = (index + 1) % total;
+  updateCarousel();
+});
+
+prev.addEventListener('click', () => {
+  index = (index - 1 + total) % total;
+  updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel);
