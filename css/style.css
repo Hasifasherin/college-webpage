@@ -754,3 +754,39 @@ header.sticky {
     font-size: 1em;
   }
 }
+.newsletter {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.newsletter h2 {
+  margin-bottom: 10px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #e6b800;
+}
+
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+}

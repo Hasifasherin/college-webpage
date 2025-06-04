@@ -293,3 +293,18 @@ prev.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', updateCarousel);
+document.getElementById("newsletterForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("emailInput").value;
+  const message = document.getElementById("message");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailPattern.test(email)) {
+    message.style.color = "lightgreen";
+    message.textContent = "Thanks for subscribing!";
+    this.reset();
+  } else {
+    message.style.color = "yellow";
+    message.textContent = "Please enter a valid email address.";
+  }
+});
