@@ -308,3 +308,25 @@ document.getElementById("newsletterForm").addEventListener("submit", function (e
     message.textContent = "Please enter a valid email address.";
   }
 });
+// Get the current visit count from localStorage
+let visitCount = localStorage.getItem("visitCount");
+
+if (visitCount === null) {
+  visitCount = 1;
+} else {
+  visitCount = parseInt(visitCount) + 1;
+}
+
+localStorage.setItem("visitCount", visitCount);
+
+// Show popup
+const popup = document.getElementById("visitPopup");
+const message = document.getElementById("visitMessage");
+
+message.textContent = `You’ve visited us ${visitCount} ${visitCount === 1 ? 'time' : 'times'}!`;
+popup.style.display = "block";
+
+// Close popup
+function closePopup() {
+  popup.style.display = "none";
+}
